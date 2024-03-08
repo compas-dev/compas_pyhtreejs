@@ -52,7 +52,6 @@
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/design-tabs.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'api/generated/compas_notebook.conversions.color_to_threejs';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://raw.githubusercontent.com/compas-dev/compas_notebook/gh-pages/versions.json';
@@ -572,8 +571,8 @@ document.write(`
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">compas.colors</span> <span class="kn">import</span> <span class="n">Color</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">color</span> <span class="o">=</span> <span class="n">Color</span><span class="o">.</span><span class="n">from_rgb255</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">color_to_threejs</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
-<span class="go">MeshBasicMaterial(alphaMap=None, aoMap=None, color=&#39;#ff0000&#39;, envMap=None, lightMap=None, map=None, specularMap=None)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">color_to_threejs</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>  
+<span class="go">MeshBasicMaterial(...)</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -629,7 +628,7 @@ document.write(`
         <div class="footer-item">
   <p class="copyright">
     
-      © Copyright COMPAS Association.
+      © Copyright ETH Zurich - Block Research Group.
       <br/>
     
   </p>

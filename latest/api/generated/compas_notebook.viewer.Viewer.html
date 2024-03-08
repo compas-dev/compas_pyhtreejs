@@ -52,7 +52,6 @@
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/design-tabs.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'api/generated/compas_notebook.viewer.Viewer';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://raw.githubusercontent.com/compas-dev/compas_notebook/gh-pages/versions.json';
@@ -553,32 +552,19 @@ document.write(`
 <h1>Viewer</h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="compas_notebook.viewer.Viewer">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">compas_notebook.viewer.</span></span><span class="sig-name descname"><span class="pre">Viewer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scene</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">camera</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">580</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">background</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Color(0.9333333333333333,</span> <span class="pre">0.9333333333333333,</span> <span class="pre">0.9333333333333333,</span> <span class="pre">alpha=1.0)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_grid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_toolbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_statusbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">viewport</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'perspective'</span></span></em><span class="sig-paren">)</span></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">compas_notebook.viewer.</span></span><span class="sig-name descname"><span class="pre">Viewer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">configpath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scene</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">controller</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Viewer for COMPAS geometry in Jupyter notebooks.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
-<dt><strong>scene</strong><span class="classifier"><a class="reference external" href="https://compas.dev/compas/latest/api/generated/compas.scene.Scene.html" title="(in COMPAS vlatest)"><code class="xref py py-class docutils literal notranslate"><span class="pre">compas.scene.Scene</span></code></a>, optional</span></dt><dd><p>A scene object.</p>
+<dt><strong>config</strong><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">Config</span></code>, optional</span></dt><dd><p>A configuration object.</p>
 </dd>
-<dt><strong>camera</strong><span class="classifier">dict, optional</span></dt><dd><p>A dictionary of camera parameters.
-Valid keys are <code class="docutils literal notranslate"><span class="pre">position</span></code>, <code class="docutils literal notranslate"><span class="pre">target</span></code>, <code class="docutils literal notranslate"><span class="pre">up</span></code>, <code class="docutils literal notranslate"><span class="pre">near</span></code>, <code class="docutils literal notranslate"><span class="pre">far</span></code>, <code class="docutils literal notranslate"><span class="pre">fov</span></code>.</p>
+<dt><strong>configpath</strong><span class="classifier">path-like or str, optional</span></dt><dd><p>The path to a configuration file.</p>
 </dd>
-<dt><strong>width</strong><span class="classifier">int, optional</span></dt><dd><p>Width of the viewer scene.</p>
+<dt><strong>scene</strong><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">Scene</span></code>, optional</span></dt><dd><p>A COMPAS scene, with context set to “Notebook”.</p>
 </dd>
-<dt><strong>height</strong><span class="classifier">int, optional</span></dt><dd><p>Height of the viewer scene.</p>
-</dd>
-<dt><strong>background</strong><span class="classifier"><a class="reference external" href="https://compas.dev/compas/latest/api/generated/compas.colors.Color.html" title="(in COMPAS vlatest)"><code class="xref py py-class docutils literal notranslate"><span class="pre">compas.colors.Color</span></code></a>, optional</span></dt><dd><p>The background color of the scene.</p>
-</dd>
-<dt><strong>show_grid</strong><span class="classifier">bool, optional</span></dt><dd><p>Show a grid in the scene.</p>
-</dd>
-<dt><strong>show_axes</strong><span class="classifier">bool, optional</span></dt><dd><p>Show axes in the scene.</p>
-</dd>
-<dt><strong>show_toolbar</strong><span class="classifier">bool, optional</span></dt><dd><p>Show the toolbar.</p>
-</dd>
-<dt><strong>show_statusbar</strong><span class="classifier">bool, optional</span></dt><dd><p>Show the statusbar.</p>
-</dd>
-<dt><strong>viewport</strong><span class="classifier">{‘top’, ‘left’, ‘front’, ‘perspective’}, optional</span></dt><dd><p>The viewport of the viewer.</p>
+<dt><strong>controller</strong><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">Controller</span></code>, optional</span></dt><dd><p>A custom action controller.</p>
 </dd>
 </dl>
 </dd>
@@ -588,10 +574,10 @@ Valid keys are <code class="docutils literal notranslate"><span class="pre">posi
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">compas</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">compas.datastructures</span> <span class="kn">import</span> <span class="n">Mesh</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">compas_notebook.viewer</span> <span class="kn">import</span> <span class="n">Viewer</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">Mesh</span><span class="o">.</span><span class="n">from_obj</span><span class="p">(</span><span class="n">compas</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;tubemesh.obj&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">Mesh</span><span class="o">.</span><span class="n">from_obj</span><span class="p">(</span><span class="n">compas</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;tubemesh.obj&quot;</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">viewer</span> <span class="o">=</span> <span class="n">Viewer</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">viewer</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">mesh</span><span class="p">)</span>  
-<span class="gp">&gt;&gt;&gt; </span><span class="n">viewer</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>        
+<span class="gp">&gt;&gt;&gt; </span><span class="n">viewer</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>  
 </pre></div>
 </div>
 <p class="rubric">Methods</p>
@@ -600,8 +586,14 @@ Valid keys are <code class="docutils literal notranslate"><span class="pre">posi
 <tr class="row-odd"><td><p><a class="reference internal" href="compas_notebook.viewer.Viewer.init_ui.html#compas_notebook.viewer.Viewer.init_ui" title="compas_notebook.viewer.Viewer.init_ui"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init_ui</span></code></a></p></td>
 <td><p>Initialize the user interface.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="compas_notebook.viewer.Viewer.load_scene.html#compas_notebook.viewer.Viewer.load_scene" title="compas_notebook.viewer.Viewer.load_scene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_scene</span></code></a></p></td>
-<td><p>Load a scene from file.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_notebook.viewer.Viewer.init_webgl.html#compas_notebook.viewer.Viewer.init_webgl" title="compas_notebook.viewer.Viewer.init_webgl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init_webgl</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_notebook.viewer.Viewer.make_main.html#compas_notebook.viewer.Viewer.make_main" title="compas_notebook.viewer.Viewer.make_main"><code class="xref py py-obj docutils literal notranslate"><span class="pre">make_main</span></code></a></p></td>
+<td><p>Initialize the main section of the user interface.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_notebook.viewer.Viewer.make_sidebar.html#compas_notebook.viewer.Viewer.make_sidebar" title="compas_notebook.viewer.Viewer.make_sidebar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">make_sidebar</span></code></a></p></td>
+<td><p></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="compas_notebook.viewer.Viewer.make_statusbar.html#compas_notebook.viewer.Viewer.make_statusbar" title="compas_notebook.viewer.Viewer.make_statusbar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">make_statusbar</span></code></a></p></td>
 <td><p>Initialize the status bar.</p></td>
@@ -609,29 +601,17 @@ Valid keys are <code class="docutils literal notranslate"><span class="pre">posi
 <tr class="row-even"><td><p><a class="reference internal" href="compas_notebook.viewer.Viewer.make_toolbar.html#compas_notebook.viewer.Viewer.make_toolbar" title="compas_notebook.viewer.Viewer.make_toolbar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">make_toolbar</span></code></a></p></td>
 <td><p>Initialize the toolbar.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="compas_notebook.viewer.Viewer.save_scene.html#compas_notebook.viewer.Viewer.save_scene" title="compas_notebook.viewer.Viewer.save_scene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_scene</span></code></a></p></td>
-<td><p>Save the scene to file.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_notebook.viewer.Viewer.make_view3d.html#compas_notebook.viewer.Viewer.make_view3d" title="compas_notebook.viewer.Viewer.make_view3d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">make_view3d</span></code></a></p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="compas_notebook.viewer.Viewer.scene_bounds.html#compas_notebook.viewer.Viewer.scene_bounds" title="compas_notebook.viewer.Viewer.scene_bounds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scene_bounds</span></code></a></p></td>
-<td><p>Compute the axis-aligned bounding box of the scene.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="compas_notebook.viewer.Viewer.set_statustext.html#compas_notebook.viewer.Viewer.set_statustext" title="compas_notebook.viewer.Viewer.set_statustext"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_statustext</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_notebook.viewer.Viewer.set_statustext.html#compas_notebook.viewer.Viewer.set_statustext" title="compas_notebook.viewer.Viewer.set_statustext"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_statustext</span></code></a></p></td>
 <td><p>Set the text of the status bar.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="compas_notebook.viewer.Viewer.show.html#compas_notebook.viewer.Viewer.show" title="compas_notebook.viewer.Viewer.show"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_notebook.viewer.Viewer.show.html#compas_notebook.viewer.Viewer.show" title="compas_notebook.viewer.Viewer.show"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show</span></code></a></p></td>
 <td><p>Display the viewer in the notebook.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="compas_notebook.viewer.Viewer.update.html#compas_notebook.viewer.Viewer.update" title="compas_notebook.viewer.Viewer.update"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_notebook.viewer.Viewer.update.html#compas_notebook.viewer.Viewer.update" title="compas_notebook.viewer.Viewer.update"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update</span></code></a></p></td>
 <td><p>Update an existing viewer instance.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="compas_notebook.viewer.Viewer.zoom_extents.html#compas_notebook.viewer.Viewer.zoom_extents" title="compas_notebook.viewer.Viewer.zoom_extents"><code class="xref py py-obj docutils literal notranslate"><span class="pre">zoom_extents</span></code></a></p></td>
-<td><p>Zoom to the extents of the scene.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="compas_notebook.viewer.Viewer.zoom_in.html#compas_notebook.viewer.Viewer.zoom_in" title="compas_notebook.viewer.Viewer.zoom_in"><code class="xref py py-obj docutils literal notranslate"><span class="pre">zoom_in</span></code></a></p></td>
-<td><p>Zoom in.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="compas_notebook.viewer.Viewer.zoom_out.html#compas_notebook.viewer.Viewer.zoom_out" title="compas_notebook.viewer.Viewer.zoom_out"><code class="xref py py-obj docutils literal notranslate"><span class="pre">zoom_out</span></code></a></p></td>
-<td><p>Zoom out.</p></td>
 </tr>
 </tbody>
 </table>
@@ -688,7 +668,7 @@ Valid keys are <code class="docutils literal notranslate"><span class="pre">posi
         <div class="footer-item">
   <p class="copyright">
     
-      © Copyright COMPAS Association.
+      © Copyright ETH Zurich - Block Research Group.
       <br/>
     
   </p>
